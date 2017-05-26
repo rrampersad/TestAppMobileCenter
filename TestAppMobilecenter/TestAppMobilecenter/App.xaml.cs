@@ -1,7 +1,4 @@
-﻿using Microsoft.Azure.Mobile;
-using Microsoft.Azure.Mobile.Analytics;
-using Microsoft.Azure.Mobile.Crashes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +16,8 @@ namespace TestAppMobilecenter
             MainPage = new TestAppMobilecenter.MainPage();
         }
 
-        const string appSecretAndroid = "06fd0889-665e-4e1b-b33a-093b3e67b207";
-
         protected override void OnStart()
         {
-            MobileCenter.Start("android=06fd0889-665e-4e1b-b33a-093b3e67b207;" +
-                   "uwp={Your UWP App secret here};" +
-                   "ios={Your iOS App secret here}",
-                   typeof(Analytics), typeof(Crashes));
-
             // Handle when your app starts
         }
 
