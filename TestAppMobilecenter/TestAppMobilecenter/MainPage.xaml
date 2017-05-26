@@ -9,7 +9,7 @@
            VerticalOptions="Center" 
            HorizontalOptions="CenterAndExpand" />
         
-        <Button Text="Byuttonote!!" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        <Button Text="Button says something good" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
 
     </StackLayout>
 </ContentPage>
