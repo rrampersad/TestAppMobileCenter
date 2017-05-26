@@ -4,8 +4,12 @@
              xmlns:local="clr-namespace:TestAppMobilecenter"
              x:Class="TestAppMobilecenter.MainPage">
 
+    <StackLayout>
 	<Label Text="Welcome to Xamarin Forms!" 
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+           HorizontalOptions="CenterAndExpand" />
+        
+        <Button Text="Byuttonote!!" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
 
+    </StackLayout>
 </ContentPage>
