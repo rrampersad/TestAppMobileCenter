@@ -5,6 +5,12 @@ using System.Text;
 
 using Xamarin.Forms;
 
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
+using TestAppMobilecenter.Utils;
+using System.Reflection;
+
 namespace TestAppMobilecenter
 {
     public partial class App : Application
@@ -18,6 +24,10 @@ namespace TestAppMobilecenter
 
         protected override void OnStart()
         {
+            var appsecret = ResourceLoader.GetEmbeddedResourceString(typeof(App).GetTypeInfo().Assembly, "secrets.txt");
+
+            MobileCenter.Start(appsecret,
+                   typeof(Analytics), typeof(Crashes));
             // Handle when your app starts
         }
 
