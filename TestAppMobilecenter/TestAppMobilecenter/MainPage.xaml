@@ -5,11 +5,12 @@
              x:Class="TestAppMobilecenter.MainPage">
 
     <StackLayout>
-	<Label Text="Welcome to Xamarin Forms!" 
+        <Label Text="{Binding Counter}" 
            VerticalOptions="Center" 
            HorizontalOptions="CenterAndExpand" />
-        
-        <Button Text="Button says something good" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+        <Button Text="Increase Counter" Command="{Binding IncreaseCountCommand}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        <Button Text="Crash the App" Command="{Binding CrashAppCommand}"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
 
     </StackLayout>
 </ContentPage>

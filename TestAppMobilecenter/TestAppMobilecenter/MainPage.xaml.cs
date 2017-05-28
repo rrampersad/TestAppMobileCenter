@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestAppMobilecenter.ViewModels;
 using Xamarin.Forms;
 
 namespace TestAppMobilecenter
@@ -12,6 +13,7 @@ namespace TestAppMobilecenter
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainPageViewModel();
         }
     }
 }
