@@ -18,7 +18,10 @@ namespace TestAppMobilecenter.ViewModels
         private int _counter;
         public int Counter
         {
-            get => _counter;
+            get
+            {
+                return _counter;
+            }
             set
             {
 
