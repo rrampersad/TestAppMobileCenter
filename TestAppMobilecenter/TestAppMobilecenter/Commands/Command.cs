@@ -14,7 +14,11 @@ namespace TestAppMobilecenter.Commands
 
         public Command(Action<object> execute)
         {
-            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            if (execute == null)
+            {
+                throw new ArgumentNullException(nameof(execute));
+            }
+            _execute = execute;
         }
 
         public Command(Action execute) : this(o => execute())
@@ -25,7 +29,12 @@ namespace TestAppMobilecenter.Commands
 
         public Command(Action<object> execute, Func<object, bool> canExecute) : this(execute)
         {
-            _canExecute = canExecute ?? throw new ArgumentNullException(nameof(canExecute));
+            if (execute == null)
+            {
+                throw new ArgumentNullException(nameof(canExecute));
+            }
+
+            _canExecute = canExecute;
         }
 
         public Command(Action execute, Func<bool> canExecute) : this(o => execute(), o => canExecute())
