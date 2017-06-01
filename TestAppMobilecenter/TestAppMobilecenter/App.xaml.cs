@@ -24,10 +24,13 @@ namespace TestAppMobilecenter
 
         protected override void OnStart()
         {
+            //MobileCenter.LogLevel = LogLevel.Debug;
             var appsecret = ResourceLoader.GetEmbeddedResourceString(typeof(App).GetTypeInfo().Assembly, "secrets.txt");
 
             MobileCenter.Start(appsecret,
                    typeof(Analytics), typeof(Crashes));
+
+            Analytics.Enabled = true;
             // Handle when your app starts
         }
 
