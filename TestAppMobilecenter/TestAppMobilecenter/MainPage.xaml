@@ -9,8 +9,8 @@
            VerticalOptions="Center" 
            HorizontalOptions="CenterAndExpand" />
 
-        <Button Text="Increase Counter" Command="{Binding IncreaseCountCommand}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-        <Button Text="Crash the App" Command="{Binding CrashAppCommand}"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        <Button x:Name="IncreasCountButton" Text="Increase Counter" Command="{Binding IncreaseCountCommand}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        <Button x:Name="CrashButton" Text="Crash the App" Command="{Binding CrashAppCommand}"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
 
     </StackLayout>
 </ContentPage>

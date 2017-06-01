@@ -42,7 +42,9 @@ namespace TestAppMobilecenter.ViewModels
 
         private void IncreaseCount()
         {
-            Analytics.TrackEvent("Counter");
+            var dict = new Dictionary<string, string>();
+            dict.Add("Count Clicked", Counter + "");
+            Analytics.TrackEvent("Counter", dict);
             Counter++;
         }
     }
